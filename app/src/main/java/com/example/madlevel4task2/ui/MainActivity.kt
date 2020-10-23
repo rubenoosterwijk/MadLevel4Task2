@@ -1,5 +1,6 @@
 package com.example.madlevel4task2.ui
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private fun displayGame(game: Game) {
         ivComputer.setImageDrawable(getDrawable(game.computerChoice))
         ivYou.setImageDrawable(getDrawable(game.playerChoice))
@@ -102,4 +104,24 @@ class MainActivity : AppCompatActivity() {
             tvStatistics.text = getString(R.string.statistics, wins, draws, losses)
         }
     }
+    private fun startHistoryActivity() {
+        startActivityForResult(Intent(this, HistoryActivity::class.java), 100)
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_open_history -> {
+                startHistoryActivity()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }
