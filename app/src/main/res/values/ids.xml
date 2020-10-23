@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="appBarLayout" type="id" />
+    <item name="tvWelcome" type="id" />
+    <item name="tvInstructions" type="id" />
+    <item name="divider" type="id" />
+    <item name="tvStatisticsTitle" type="id" />
+    <item name="ivPaper" type="id" />
+    <item name="ivScissors" type="id" />
+    <item name="ivRock" type="id" />
+    <item name="ivComputer" type="id" />
+</resources>
