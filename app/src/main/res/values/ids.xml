@@ -9,4 +9,5 @@
     <item name="ivScissors" type="id" />
     <item name="ivRock" type="id" />
     <item name="ivComputer" type="id" />
+    <item name="action_delete_history" type="id" />
 </resources>

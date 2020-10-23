@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun getDrawableId(choice: Game.Choice): Int {
         return when (choice) {
             Game.Choice.ROCK -> R.drawable.rock
@@ -70,7 +69,6 @@ class MainActivity : AppCompatActivity() {
             Game.Choice.SCISSORS -> R.drawable.scissors
         }
     }
-
 
     private fun getResult(playerChoice: Game.Choice, computerChoice: Game.Choice): Game.Result? {
         return Game.Result.values().associateBy(Game.Result::value)[ChoiceComparator()

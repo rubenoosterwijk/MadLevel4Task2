@@ -33,6 +33,7 @@ class GameAdapter(private val games: List<Game>) : RecyclerView.Adapter<GameAdap
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val context: Context = itemView.context.applicationContext
+
         private val tvResult: TextView = itemView.findViewById(R.id.tvResult)
         private val tvDate: TextView = itemView.findViewById(R.id.tvDate)
         private val ivComputer: ImageView = itemView.findViewById(R.id.ivComputer)
